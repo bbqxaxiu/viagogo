@@ -22,14 +22,14 @@ public class Coordinate{
       tickets = new ArrayList<Ticket>();
   }
 
+  //Generates a random number of tickets, each of which has a random price,
+  //for a given coordinate or event.
   public void generateTickets(){
     Random rand = new Random();
     int numTickets = rand.nextInt(6); //Assume each event has at most 5 tickets.
     for(int i = 0; i < numTickets; i++){
-      int price = rand.nextInt(100) + 1;
+      int price = rand.nextInt(100) + 1; //Assume prices range from 1-100.
       tickets.add(new Ticket(price));
     }
   }
-
-
 }

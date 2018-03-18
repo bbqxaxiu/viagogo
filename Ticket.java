@@ -8,6 +8,6 @@ public class Ticket{
   public int price;
 
   public Ticket(int price){
-    this.price = price; 
+    this.price = price;
   }
 }

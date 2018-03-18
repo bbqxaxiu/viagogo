@@ -1,3 +1,7 @@
+/*
+  This class is the tester class for the Viagogo coding challenge.
+*/
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -10,6 +14,7 @@ public class Tester{
       Coordinate coordinate = grid.coordinates.get(i);
       ArrayList<Ticket> tickets = coordinate.tickets;
       ArrayList<Integer> prices = new ArrayList<Integer>();
+
       for(int j = 0; j < tickets.size(); j++){
         prices.add(tickets.get(j).price);
       }

@@ -18,6 +18,8 @@ public class Grid{
     coordinates = new ArrayList<Coordinate>();
     idsAlreadyUsed = new ArrayList<Integer>();
     rand = new Random();
+
+    //Assume there are 1-20 coordinates in the grid.
     numCoordinates = rand.nextInt(20) + 1;
   }
 
@@ -50,12 +52,16 @@ public class Grid{
     HashMap<Integer, Coordinate> hm = new HashMap<Integer, Coordinate>();
     PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>();
 
+    //Calculate the distance between every coordinate and the given location.
     for(int i = 0; i < numCoordinates; i++){
       Coordinate coordinate = coordinates.get(i);
       int manDistance = Math.abs(x - coordinate.x) + Math.abs(y - coordinate.y);
       hm.put(manDistance, coordinate);
     }
 
+    //Using a min heap, which contains the closest distances to the given
+    //location, in conjunction with a HashMap that maps distance(s) to
+    //coordinate(s) allows us to get the top k closest points.
     for(int distance: hm.keySet()){
       minHeap.add(distance);
     }
@@ -75,6 +81,7 @@ public class Grid{
     }
   }
 
+  //Given an event's list of ticket prices, return the cheapest ticket.
   public int getCheapestTicket(ArrayList<Ticket> tickets){
     //Assume that you return 0 if an event has no tickets.
     if(tickets.size() == 0) return 0;
