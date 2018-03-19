@@ -12,5 +12,9 @@ My code is heavily documented with the assumptions that I made, which include th
   1. Every "Grid" has between 1-20 coordinates or events. 
   2. Every coordinate or event has 0-5 tickets. Each ticket has a price ranging from 1-100.
   3. If there are two coordinates or events that are the same distance away from the user inputted location, we only return        one of the events and its corresponding cheapest ticket price. 
+
+Answers to follow up questions:  
+  1. If I had to change my program to support multiple events at the same location, I would create a separate Event class          (which would have its eventID and list of tickets) and make it such that every Coordinate object had a list of Events          instead of just one. (The way my program is currently set up, we assume that every Coordinate only has one event, so the      event and the coordinate are synonymous). From here, we can then modify fiveClosestPoints() so that it runs through the        list of Events of every Coordinate that is a given distance away from the location the user inputted and returns the          cheapest ticket for that Event along with the Event's eventID. 
+  2. If I had to change my program to support a much larger world size, I would break up every quandrant of this new world          into a separate class: that is, I would have 4 Grid classes corresponding to the 1st, 2nd, 3rd, and 4th quadrant. (As it      is now, the Grid class encapsulates the whole world instead of just one quadrant of the world). From here, we can reuse        the Coordinate and Ticket classes for each Grid. This easy fix exploits the flexible nature of my OOP approach to this        coding challenge. 
   
 To run and test the program, compile and run the tester class (Tester.java). 
