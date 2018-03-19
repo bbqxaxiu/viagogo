@@ -91,7 +91,6 @@ public class Grid{
         Ticket currTicket = tickets.get(i);
         if(currTicket.price < minPrice) minPrice = currTicket.price;
       }
-
       return minPrice;
     }
   }
