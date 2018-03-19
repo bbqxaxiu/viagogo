@@ -32,4 +32,5 @@ public class Coordinate{
       tickets.add(new Ticket(price));
     }
   }
+  
 }
