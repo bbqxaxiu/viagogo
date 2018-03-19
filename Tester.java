@@ -6,11 +6,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Tester{
+  
   public static void main(String[] args){
     Grid grid = new Grid();
     grid.generateGrid();
 
     for(int i = 0; i < grid.coordinates.size(); i++){
+      
       Coordinate coordinate = grid.coordinates.get(i);
       ArrayList<Ticket> tickets = coordinate.tickets;
       ArrayList<Integer> prices = new ArrayList<Integer>();
@@ -26,7 +28,6 @@ public class Tester{
                 coordinate.y + ")" + " with event ID " + coordinate.eventID);
       System.out.println(" has the following ticket prices: " + prices);
       */
-
     }
 
     Scanner scanner = new Scanner(System.in);
@@ -36,4 +37,5 @@ public class Tester{
     int y = Character.getNumericValue(input.charAt(2));
     grid.fiveClosestEvents(x, y);
   }
+  
 }
