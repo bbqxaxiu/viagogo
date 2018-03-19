@@ -10,4 +10,5 @@ public class Ticket{
   public Ticket(int price){
     this.price = price;
   }
+  
 }
