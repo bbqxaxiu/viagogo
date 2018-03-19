@@ -21,10 +21,11 @@ public class Tester{
 
       //Uncomment this to see each coordinate you add to the grid along with
       //its corresponding eventID and ticket prices.
-
+      /*
       System.out.print("Coordinate at location (" + coordinate.x + "," +
                 coordinate.y + ")" + " with event ID " + coordinate.eventID);
       System.out.println(" has the following ticket prices: " + prices);
+      */
 
     }
 
